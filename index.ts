@@ -15,7 +15,9 @@ const main = () => {
   ];
   const result12 = FirstBackTask.getResult(actions_list2);
 
-  const result2 = SecondBackTask.getResult();
+  const result21 = SecondBackTask.getResult(7, 3);
+  const result22 = SecondBackTask.getResult(5, 123456789);
+
   const result3 = ThirdBackTask.getResult();
 
   console.log(
@@ -24,7 +26,10 @@ const main = () => {
         result11,
         result12,
       },
-      result2,
+      result2: {
+        result21,
+        result22,
+      },
       result3,
     }
   );
