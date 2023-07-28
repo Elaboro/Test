@@ -98,6 +98,6 @@ export class ThirdBackTask {
       probably = [...blok_save, ...probably_new];
     }
 
-    return probably.toString();
+    return probably.join('');
   }
 }
