@@ -73,6 +73,18 @@ export class ThirdBackTask {
 
     let probably = str.split("");
 
+    const {
+      max: max_depth,
+    } = this.findMaxDepth(probably);
+
+    if(max_depth > 5) {
+      throw new Error("Нарушены условия задачи: не более пяти слоев вложенности");
+    }
+
+    if(probably.length <= 1 || probably.length > 25) {
+      throw new Error("Нарушены условия задачи: от 1 до 25 символов");
+    }
+
     while(probably.includes("{")) {
       let probably_new = [];
 

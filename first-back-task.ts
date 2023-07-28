@@ -5,6 +5,11 @@ export type ActionTypeList = "start" | "connect" | "message" | "end";
 @Injectable()
 export class FirstBackTask {
   static getResult(actions: ActionTypeList[]): number {
+
+    if(actions.length <= 3 || actions.length >= 50) {
+      throw new Error("Нарушины условия задачи. От 3 до 50.");
+    }
+
     let result = 0;
 
     const success = ["start", "connect", "message", "end"];
